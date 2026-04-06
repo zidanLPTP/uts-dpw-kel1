@@ -1,13 +1,78 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <section class="bg-blue-500 text-white p-10">
-      <h1 class="text-4xl font-bold">Mitra Carousel</h1>
-    </section>
-  </body>
-</html>
+<!-- Swiper Carousel -->
+<div class="swiper mySwiper h-80">
+  <div class="swiper-wrapper">
+    <!-- Slide 1 -->
+    <div class="swiper-slide">
+      <div class="bg-base-200/50 flex h-full justify-center p-6">
+        <img
+          src="image/april.png"
+          alt="APRIL Group PT.Riau Andalan Pulp and Paper"
+        />
+      </div>
+    </div>
+    <!-- Slide 2 -->
+    <div class="swiper-slide">
+      <div class="bg-base-200 flex h-full justify-center p-6">
+        <img
+          src="image/daehan.png"
+          alt="Daehan E&C Engginering And Countructions"
+        />
+      </div>
+    </div>
+    <!-- Slide 3 -->
+    <div class="swiper-slide">
+      <div class="bg-base-200 flex h-full justify-center p-6">
+        <span class="self-center text-lg">Third slide</span>
+      </div>
+    </div>
+    <!-- Slide 4 -->
+    <div class="swiper-slide">
+      <div class="bg-base-200/50 flex h-full justify-center p-6">
+        <span class="self-center text-lg">Fourth slide</span>
+      </div>
+    </div>
+    <!-- Slide 5 -->
+    <div class="swiper-slide">
+      <div class="bg-base-200 flex h-full justify-center p-6">
+        <span class="self-center text-lg">Fifth slide</span>
+      </div>
+    </div>
+    <!-- Slide 6 -->
+    <div class="swiper-slide">
+      <div class="bg-base-200 flex h-full justify-center p-6">
+        <span class="self-center text-lg">Sixth slide</span>
+      </div>
+    </div>
+  </div>
+  <div class="swiper-pagination"></div>
+  <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const swiper = new Swiper(".mySwiper", {
+      slidesPerView: 1,
+      spaceBetween: 10,
+      centeredSlides: true,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      breakpoints: {
+        640: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+      },
+    });
+  });
+</script>
