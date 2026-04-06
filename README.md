@@ -12,3 +12,8 @@ Dilakukan oleh kkelompok 1 dengan anggota
 
 1. membuat struktur folder web menjadi komponent2 supaya mudah di developt
 2. membuat file components/mitra-component.html
+
+### Muhammad Rifqi Fathurrahman
+
+1. Membuat file components/hero-component.html
+2. Membuat file components/footer-component.html
