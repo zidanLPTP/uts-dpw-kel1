@@ -3,7 +3,19 @@ async function loadComponent(id, file) {
     const res = await fetch(file);
     if (!res.ok) throw new Error("Component not found");
     const html = await res.text();
-    document.getElementById(id).innerHTML = html;
+    const container = document.getElementById(id);
+    container.innerHTML = html;
+
+    container.querySelectorAll('script').forEach(oldScript => {
+      const script = document.createElement('script');
+      if (oldScript.src) {
+        script.src = oldScript.src;
+      } else {
+        script.textContent = oldScript.textContent;
+      }
+      document.body.appendChild(script);
+      oldScript.remove();
+    });
   } catch (err) {
     console.error(err);
   }
